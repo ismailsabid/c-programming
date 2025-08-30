@@ -136,8 +136,123 @@
 
 // }
 
-//🔥🔥🔥PROB 10:WAP to print the multiplication of two matrices givne by the user.
 
 
+// //🔥🔥🔥PROB 10:WAP to print the multiplication of two matrices givne by the user.🔥🔥🔥
+
+// int main(){
+//     int m=2,n=3,p=3,q=2; 
+//     int a[2][3]={
+//     {1, 2, 3},
+//     {4, 5, 6}
+//     };
+//     //printing a matrix;
+//     printf("\n A matrix : \n");
+//     for(int i=0;i<m;i++){
+//         for(int j=0;j<n;j++){
+//             printf("%d ",a[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     printf("\n\n");
+
+//     int b[3][2]={
+//     {7, 8},
+//     {9, 10},
+//     {11, 12}
+//     };
+
+//     //printing b matrix;
+//     printf("\n B matrix : \n");
+//     for(int i=0;i<p;i++){
+//         for(int j=0;j<q;j++){
+//             printf("%d ",b[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     printf("\n\n");
+
+//     int res[m][q];
+//     if(n!=p){
+//         printf("Matrices cannot be multiplied");
+//     }else{
+//         for(int i=0;i<m;i++){
+//             for(int j=0;j<q;j++){
+//                 res[i][j]=0;
+//                 for(int k=0;k<n;k++){
+//                     res[i][j]+=a[i][k]*b[k][j];
+//                 }
+//             }
+//         }
+//     }
+//     printf("\n result:\n");
+//     for(int i=0;i<m;i++){
+//         for(int j=0;j<q;j++){
+//             printf("%d ",res[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     printf("\n\n");
 
 
+// }
+
+
+// //😎//PROB 11: Wave printing -1(row wise);
+
+// int main (){
+//     int arr[3][3]={
+//         {1,2,3},
+//         {4,5,6},
+//         {7,8,9}
+//     };
+//     for(int i=0;i<3;i++){
+//         if(i%2==0){
+//             for(int j=0;j<3;j++){
+//                 printf("%d ",arr[i][j]);
+//             }
+//         }else{
+//             for(int j=2;j>=0;j--){
+//                 printf("%d ", arr[i][j]);
+//             }
+//         }
+//     }
+// }
+
+//😎PROB 12: WAVE printing -2(Column wise);//this one needs to be checked
+
+
+int main(){
+    //making array:
+
+    int m,n;
+    printf("Enter row of the matrix: ");
+    scanf("%d", &m);
+    printf("Enter column of the matrix: ");
+    scanf("%d", &n);
+    int arr[m][n];
+
+    //taking input:
+
+    printf("Enter elements of the matrix: \n");
+    for(int i=0;i<m;i++){
+        for(int j=0;j<n;j++){
+            scanf("%d",&arr[i][j]);
+        }
+        printf("\n");
+    }
+
+
+    //wave printing:
+    for(int i=0;i<n;i++){
+        if(i%2==0){
+            for(int j=m-1;j>=0;j--){
+                printf("%d ", arr[j][i]);
+            }
+        }else{
+            for(int j=0;j<m;j++){
+                printf("%d ", arr[j][i]);
+            }
+        }
+    }
+}
