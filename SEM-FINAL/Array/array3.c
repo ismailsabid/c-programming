@@ -337,3 +337,15 @@
 //     }
 // }
 
+
+//to delete from a postion:
+
+int main(){
+    int arr[7]={1,3,5,6,7,3,2},pos;
+    printf("Enter the positoin");
+    scanf("%d",&pos);
+    for(int i=pos-1;i<7;i++){
+        arr[i]=arr[i+1];
+    }
+    printf("%d",arr[6]);
+}

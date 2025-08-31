@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include<stdlib.h>
 
 // //✌️PROB 1:cREATE A STRUCTURE TYPE 'BOOK' WITH NAME ,PRICE AND NUMBER OF PAGES AS ITS ATTRIBUTES.
 
@@ -196,22 +197,166 @@
 // //needs to check
 
 // }
-//✌️//PROB  4:Create a  structure 'person' having attributes as age and weight. Access its structure variables using pointers.
+// //✌️//PROB  4:Create a  structure 'person' having attributes as age and weight. Access its structure variables using pointers.
 
-typedef struct person{
-    int age;
-    int weight;
-}person;
-int main(){
-    person tawsif;
-    person *x=&tawsif;
+// typedef struct person{
+//     int age;
+//     int weight;
+// }person;
+// int main(){
+//     person tawsif;
+//     person *x=&tawsif;
 
-    (*x).age=15;
-    (*x).weight=30;
+//     (*x).age=15;
+//     (*x).weight=30;
 
-    printf("The age of tawsif is : %d\n", (*x).age);
-    printf("Tawsif is %d kg.", (*x).weight);
-}
+//     printf("The age of tawsif is : %d\n", (*x).age);
+//     printf("Tawsif is %d kg.", (*x).weight);
+// }
 
+
+// //😎PROB 5: SWAPPING NUMBERS.(PASS BY REFERENCE)
+
+// void swap(int *x,int *y){
+//     int temp;
+//     temp=*x;
+//     *x=*y;
+//     *y=temp;
+// }
+// int main(){
+//     int sakib=12,rakib=20;
+//     printf("Sakib=%d\nRakib=%d\n\nAfter swapping:\n",sakib,rakib);
+//     swap(&sakib,&rakib);
+//     printf("Sakib=%d\nRakib=%d",sakib,rakib);
+// }
+
+// //🔥PROB 6: Create a structure Student with members name (string) and marks (int). Write a function void updateMarks(Student *s, int newMarks) that takes a pointer to a Student and updates its marks with the given newMarks. In the main() function, create a Student variable and input its name and marks from the user. Then call updateMarks() passing the address of the student. Finally, print the student’s details both before and after calling the function to verify that the marks have been updated using pass by reference.
+
+// // If you want, I can also write the full C code for this paragraph so you can directly try it out.
+// struct Student{
+//     char name[20];
+//     int marks;
+// };
+
+// void updateMarks(struct Student *x, int newMarks){
+//     strcpy(x->name,"Tawsif");
+//     x->marks=newMarks;
+// }
+
+
+// int main(){
+    
+//     struct Student tawsif={"rakib",100},rakib={"Rakib", 120};
+//     struct Student *x=&tawsif, *y=&rakib;
+//     updateMarks(x,200);
+//     printf("%s\n", x->name );
+//     printf("%d\n", x->marks);
+
+//     x=y;
+//     printf("%s\n", x->name );
+//     printf("%d\n", x->marks);
+    
+
+    
+
+// // }
+// //😎//PROB 7:Write a program to take N number of integers as input and display them.
+
+// int main(){
+//     int *x =(int*) malloc(10*sizeof(int));
+//     int *p=x;
+//     for(int i=1;i<=10;i++){
+//         printf("Enter the %dth element: ",i);
+//         scanf("%d",x);
+//         x++;
+//     }
+//     for(int i=1;i<=10;i++){
+//         printf("%dth element is: %d",i,(*p));
+//         p++;
+//     }
+// }
+// // 🔥Dynamic Memory Allocation using malloc:
+// // Write a program to dynamically allocate memory for an array of integers using malloc.
+// // • Prompt the user to enter the size of the array.
+// // • Allocate memory for the array based on the user input.
+// // • Prompt the user to enter elements for the array.
+// // • Print the array elements.
+// // • Freethe allocated memory using free
+
+// int main(){
+//     int *arr;
+//     int size;
+
+//     //asking the size:
+
+//     printf("Enter the size of the array: ");
+//     scanf("%d", &size);
+
+
+//     //allocating memory using malloc;
+
+//     arr=(int*)malloc(size*sizeof(int));
+
+//     //failed or not:
+//     if(arr==NULL){
+//         printf("Memory allocation failed\n");
+//         return 1;
+//     }
+
+//     //taknig input for the array:
+//     printf("Enter elements for the array: ");
+//     for(int i=0;i<size;i++){
+//         scanf("%d",&arr[i]);//scanf("%d", (arr+i));
+//     }
+//     //printing the array:
+//     printf("The elements are: \n");
+//     for(int i=0;i<size;i++){
+//         printf("%d ",arr[i]);
+//     }
+//     free(arr);
+    
+// }
+// // //🔥PROB 8:Dynamic Memory Reallocation using realloc:
+// // Write a program to demonstrate dynamic memory reallocation using realloc.
+// // • Initially, allocate memory for an array of integers with a small size using malloc.
+// // • Prompt the user to enter additional elements to be added to the array.
+// // • Userealloc to resize the array dynamically to accommodate the new elements.
+// // • Print the updated array elements after reallocation.
+// // • Freethe allocated memory using free
+
+// int main(){
+//     int *arr, size,newSize;
+
+//     //initial size:
+//     size=5;
+
+//     //allocating memory using malloc:
+
+//     arr=(int*)malloc(size*sizeof(int));
+//     if(arr==NULL){
+//         printf("memory allocation failed\n");
+//         return 1;
+//     }
+
+//     //taking additional input :
+
+//     printf("Enter additional elements: ");
+//     for(int i=0;i<size;i++){
+//         scanf("%d",&arr[i]);
+//     }
+//     //asking how many elements to be added:
+//     printf("How many elements left to be added:");
+//     scanf("%d", &newSize);
+//     //resizing the array using realloc:
+
+//     arr=realloc(arr,newSize*sizeof(int));
+
+//     //printing the updated elements:
+
+//     printf("Updated elements are: \n");
+//     for(int i=0;i<newSize;i++){
+//         printf("%d ",arr[i]);
+//     }
+// }
 
 
